@@ -1,0 +1,74 @@
+[
+ {
+  "spec": "surf2d:5",
+  "noise": "willow_star",
+  "fseed": 0,
+  "shots": 400000,
+  "w_z": 24,
+  "b_z": 24,
+  "w_x": 53,
+  "b_x": 51,
+  "ler_weighted": 0.0001325,
+  "ler_blind": 0.0001275
+ },
+ {
+  "spec": "surf2d:5",
+  "noise": "willow_star",
+  "fseed": 1,
+  "shots": 400000,
+  "w_z": 16,
+  "b_z": 19,
+  "w_x": 63,
+  "b_x": 77,
+  "ler_weighted": 0.0001575,
+  "ler_blind": 0.0001925
+ },
+ {
+  "spec": "surf2d:5",
+  "noise": "willow_star",
+  "fseed": 2,
+  "shots": 400000,
+  "w_z": 37,
+  "b_z": 38,
+  "w_x": 132,
+  "b_x": 165,
+  "ler_weighted": 0.00033,
+  "ler_blind": 0.0004125
+ },
+ {
+  "spec": "surf2d:5",
+  "noise": "xyz:10",
+  "fseed": 0,
+  "shots": 400000,
+  "w_z": 94,
+  "b_z": 116,
+  "w_x": 75,
+  "b_x": 93,
+  "ler_weighted": 0.000235,
+  "ler_blind": 0.00029
+ },
+ {
+  "spec": "surf2d:5",
+  "noise": "xyz:10",
+  "fseed": 1,
+  "shots": 400000,
+  "w_z": 55,
+  "b_z": 81,
+  "w_x": 52,
+  "b_x": 74,
+  "ler_weighted": 0.0001375,
+  "ler_blind": 0.0002025
+ },
+ {
+  "spec": "surf2d:5",
+  "noise": "xyz:10",
+  "fseed": 2,
+  "shots": 400000,
+  "w_z": 77,
+  "b_z": 104,
+  "w_x": 36,
+  "b_x": 48,
+  "ler_weighted": 0.0001925,
+  "ler_blind": 0.00026
+ }
+]

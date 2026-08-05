@@ -1,0 +1,19 @@
+# Chameleon runtime dependencies (lower bounds).
+# For the exact versions the paper's numbers were produced with, use
+# requirements-lock.txt instead.
+
+numpy>=1.21
+scipy>=1.7
+sympy>=1.10            # bivariate-bicycle polynomial specifications
+
+stim>=1.12             # stabilizer circuit simulation
+pymatching>=2.0        # MWPM decoder (graphlike surface-code memory)
+ldpc>=2.0              # BP+OSD decoder (bivariate-bicycle codes)
+chromobius>=1.0        # color-code decoder
+panqec>=0.1.7          # surface / Color666 planar code constructions
+qldpc>=0.1             # bivariate-bicycle code constructions
+
+pandas>=1.5            # tabular export
+xlsxwriter>=3.0        # xlsx workbook (writer)
+openpyxl>=3.1          # xlsx workbook (reader, so the export can be verified)
+pytest>=7.0            # test suite

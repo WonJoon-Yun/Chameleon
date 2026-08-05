@@ -1,0 +1,19 @@
+# generated paper artifacts
+output/
+
+# environments
+venv/
+.venv/
+*.egg-info/
+build/
+dist/
+
+# python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# runner scratch
+*.lock
+*.tmp
+*.log

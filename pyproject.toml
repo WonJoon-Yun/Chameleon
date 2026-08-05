@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chameleon-qec"
+version = "1.0.0"
+description = "Chameleon: computationally efficient per-qubit Clifford deformation for non-uniform biased noise."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [
+    { name = "Won Joon Yun", email = "wonjoon.yun@utexas.edu" },
+    { name = "Andrew Nemec" },
+    { name = "Jonathan M. Baker" },
+]
+keywords = [
+    "quantum error correction", "surface code", "color code",
+    "bivariate bicycle code", "biased noise", "Clifford deformation",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+# The reproduction tier, and only that: `chameleon` loads its submodules lazily,
+# so reading the shipped records and exporting them never imports a simulator.
+# This mirrors requirements-minimal.txt -- installing the package must not drag
+# in the measurement stack for someone who only wants to reproduce the results.
+dependencies = [
+    "numpy>=1.21",
+    "pandas>=1.5",          # tabular export
+    "xlsxwriter>=3.0",      # xlsx workbook (writer)
+    "openpyxl>=3.1",        # xlsx workbook (reader, so the export can be verified)
+]
+
+[project.optional-dependencies]
+# The measurement tier -- needed only to re-measure from scratch. Mirrors the
+# simulator half of requirements.txt.  pip install "chameleon-qec[measure]"
+measure = [
+    "scipy>=1.7",
+    "sympy>=1.10",          # bivariate-bicycle polynomial specifications
+    "stim>=1.12",           # stabilizer circuit simulation
+    "pymatching>=2.0",      # MWPM decoder (graphlike surface-code memory)
+    "ldpc>=2.0",            # BP+OSD decoder (bivariate-bicycle codes)
+    "chromobius>=1.0",      # color-code decoder
+    "panqec>=0.1.7",        # surface / Color666 planar code constructions
+    "qldpc>=0.1",           # bivariate-bicycle code constructions
+]
+# The gates the test suite runs when they are present: without these installed
+# the lint tests skip, and a gate that skips is not a gate.
+dev = [
+    "pytest>=7.0",
+    "pyflakes>=3.0",        # dead imports and locals
+    "shellcheck-py>=0.9",   # the shell drivers
+]
+
+[project.urls]
+Repository = "https://github.com/WonJoon-Yun/Chameleon"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["chameleon*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,42 @@
+# Convenience wrapper around the artifact image.
+#
+#   docker compose -f docker/docker-compose.yml run --rm smoke
+#   docker compose -f docker/docker-compose.yml run --rm data
+#   docker compose -f docker/docker-compose.yml run --rm shell
+#
+# The generated CSV files and XLSX workbook land in ./output on the host.
+
+services:
+  base: &base
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: chameleon-ae:latest
+    working_dir: /artifact
+    volumes:
+      - ../output:/artifact/output
+    environment:
+      LEVER_ROOT: /artifact
+      CHAM_PAPER_DIR: output
+
+  smoke:
+    <<: *base
+    command: make smoke
+
+  data:
+    <<: *base
+    command: make data
+
+  values:
+    <<: *base
+    command: make values
+
+  all:
+    <<: *base
+    command: make all
+
+  shell:
+    <<: *base
+    command: bash
+    stdin_open: true
+    tty: true

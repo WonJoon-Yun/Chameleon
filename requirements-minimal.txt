@@ -1,0 +1,14 @@
+# Minimal dependencies for Stage 1 -- reproducing every reported result from the
+# shipped records (`make all`). This is the whole artifact-evaluation path.
+#
+#     pip install -r requirements-minimal.txt && make all
+#
+# The simulators and decoders are NOT needed here: `chameleon` loads submodules
+# lazily, so reading records and exporting them never imports stim, pymatching,
+# ldpc, chromobius, panqec or qldpc. Install requirements.txt (or
+# requirements-lock.txt) only to re-measure from scratch with `make experiments`.
+
+numpy>=1.21
+pandas>=1.5            # tabular export
+xlsxwriter>=3.0        # xlsx workbook (writer)
+openpyxl>=3.1          # xlsx workbook (reader, so the export can be verified)

@@ -1,0 +1,24 @@
+# Conda environment for the Chameleon artifact.
+#   conda env create -f environment.yml && conda activate chameleon-ae
+# Works on linux-64, linux-aarch64, osx-64 and osx-arm64 (Apple silicon).
+name: chameleon-ae
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - numpy=1.26.4
+  - scipy=1.15.2
+  - sympy=1.14.0
+  - pandas>=1.5
+  - xlsxwriter>=3.0
+  - openpyxl>=3.1
+  - pytest>=7.0
+  - pip:
+      - stim==1.16.0
+      - pymatching==2.4.0
+      - ldpc==2.4.1
+      - chromobius==1.1.1
+      - qldpc==0.2.9
+      - panqec>=0.1.7
+      - -e .

@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+title: "Chameleon: Computationally Efficient Per-Qubit Clifford Deformation for Non-uniform Biased Noise"
+message: "If you use this artifact, please cite the paper below."
+type: software
+authors:
+  - family-names: Yun
+    given-names: Won Joon
+    email: wonjoon.yun@utexas.edu
+    affiliation: The University of Texas at Austin
+  - family-names: Nemec
+    given-names: Andrew
+    affiliation: The University of Texas at Dallas
+  - family-names: Baker
+    given-names: Jonathan M.
+    affiliation: The University of Texas at Austin
+license: Apache-2.0
+repository-code: "https://github.com/WonJoon-Yun/Chameleon"
+keywords:
+  - quantum error correction
+  - Clifford deformation
+  - biased noise
+  - surface code
+  - color code
+  - bivariate bicycle code
+preferred-citation:
+  type: conference-paper
+  title: "Chameleon: Computationally Efficient Per-Qubit Clifford Deformation for Non-uniform Biased Noise"
+  authors:
+    - family-names: Yun
+      given-names: Won Joon
+    - family-names: Nemec
+      given-names: Andrew
+    - family-names: Baker
+      given-names: Jonathan M.

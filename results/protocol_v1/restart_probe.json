@@ -1,0 +1,29 @@
+[
+ {
+  "spec": "surf2d:5",
+  "noise": "berlin_star",
+  "fseed": 0,
+  "restarts": 20,
+  "final_spread": 1.0016130043164857,
+  "hit_iter_median": 5,
+  "hit_iter_max": 6
+ },
+ {
+  "spec": "color2d:5",
+  "noise": "willow_star",
+  "fseed": 0,
+  "restarts": 20,
+  "final_spread": 1.002172309940752,
+  "hit_iter_median": 5,
+  "hit_iter_max": 6
+ },
+ {
+  "spec": "BB72",
+  "noise": "xyz:10",
+  "fseed": 0,
+  "restarts": 20,
+  "final_spread": 1.0828889312793843,
+  "hit_iter_median": 43,
+  "hit_iter_max": 50
+ }
+]

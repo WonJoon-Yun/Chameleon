@@ -1,0 +1,27 @@
+[
+ {
+  "spec": "BB72",
+  "s_per_shot": 0.003309117555618286
+ },
+ {
+  "spec": "BB144",
+  "s_per_shot": 0.06120101571083069
+ },
+ {
+  "spec": "BB108",
+  "s_per_shot": 0.0115,
+  "source": "bb108_timing probe 2026-07-12 08:10"
+ },
+ {
+  "spec": "BB18",
+  "s_per_shot": 0.0017095378637313843,
+  "note": "bbsmall timing 2026-07-13",
+  "n_dec": 2000
+ },
+ {
+  "spec": "BB30",
+  "s_per_shot": 0.001380228877067566,
+  "note": "bbsmall timing 2026-07-13",
+  "n_dec": 2000
+ }
+]

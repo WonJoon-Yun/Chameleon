@@ -1,0 +1,24 @@
+# Frozen dependency versions for the Chameleon artifact (Python 3.12.9).
+# These are the EXACT versions the released pipeline runs, so "the artifact pins
+# versions" (paper Sec. V) is reproducible: install with
+#     pip install -r requirements-lock.txt
+# requirements.txt keeps >= lower bounds for flexible installs; this file pins the
+# exact set behind the reported numbers. (Randomness is separately pinned by the
+# deterministic seed schedule in src/chameleon/config.py; every result record also
+# carries a cfg_id fingerprint of the full configuration.)
+numpy==1.26.4
+scipy==1.15.2
+stim==1.16.0
+pymatching==2.4.0
+ldpc==2.4.1
+chromobius==1.1.1
+qldpc==0.2.9
+sympy==1.14.0
+# panqec: surface / color-666 constructions (installed build reports no version string;
+# use >=0.1.7 per requirements.txt).
+panqec>=0.1.7
+# ortools (OPTIONAL): CP-SAT max-min diagnostic, surface code only; pipeline runs without it.
+# ortools==9.11.4210
+pandas==2.2.3
+xlsxwriter==3.2.9
+openpyxl==3.1.5
