@@ -107,9 +107,7 @@ make smoke
 ```
 
 1. resolves every dependency and imports the package;
-2. runs the pytest suite, including a **golden-hash regression** that pins the
-   exact `stim` circuit the protocol builds — if a dependency upgrade silently
-   changes the circuit, this fails loudly;
+2. runs the pytest suite;
 3. measures one miniature pipeline cell live (surface d=3, one Willow map,
    reduced budget) and asserts the selected frame beats the undeformed code on
    the surrogate;
@@ -136,7 +134,7 @@ stage and reported by the export.
 ```bash
 make quick          # anchor tier only, ~4 core-days
 make experiments    # everything, ~40 core-days
-PROCS=32 make experiments
+PROCS=32 make experiments  # If you have more processors, change the value PROCS=<N_PROCS>
 ```
 
 Re-runs the protocol matrix and every supporting study from scratch. Runners
@@ -217,3 +215,7 @@ preserves bit-identical reproduction.
 
 Apache License 2.0 — see `LICENSE`. Please cite the paper (`CITATION.cff`) if
 you use this artifact.
+
+## Contribution
+
+We are open for contributors, please feel free to raise pull request.
